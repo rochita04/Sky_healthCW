@@ -1,0 +1,61 @@
+{% extends 'voting_app/base.html' %}
+{% load static %}
+
+{% block title %}Team Summary - Sky Health Check{% endblock %}
+
+{% block content %}
+<div class="team-summary-container">
+    <div class="company-header">
+        <img src="{% static 'voting_app/images/sky_logo.png' %}" alt="Sky Logo" class="company-logo">
+        <h1 class="company-name">Squad Health Check System</h1>
+    </div>
+
+    <h2 class="dashboard-heading">Engineer Performance Summary 📊</h2>
+    <p class="dashboard-subheading">This summary is based on engineers' quiz responses (role ID = 2).</p>
+
+    <!-- ✅ Chart -->
+    <div class="charts-section">
+        <canvas id="colorDistributionChart" height="200"></canvas>
+    </div>
+
+    <!-- ✅ Per-Question Color Distribution Table -->
+    <div class="engineer-report">
+        <h3>Color Distribution per Question</h3>
+        <table class="report-table">
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th>Green</th>
+                    <th>Yellow</th>
+                    <th>Red</th>
+                </tr>
+            </thead>
+            <tbody id="color-table-body">
+                <!-- JS will populate -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ✅ Engineer Score Summary Table -->
+    <div class="engineer-report">
+        <h3>Engineer Score Summary</h3>
+        <table class="report-table">
+            <thead>
+                <tr>
+                    <th>Member ID</th>
+                    <th>Name</th>
+                    <th>Quiz Status</th>
+                    <th>Total Score</th>
+                </tr>
+            </thead>
+            <tbody id="score-summary-body">
+                <!-- JS will populate -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{% static 'voting_app/js/team_summary.js' %}"></script>
+{% endblock %}

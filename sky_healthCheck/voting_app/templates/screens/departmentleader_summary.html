@@ -1,0 +1,52 @@
+{% extends 'voting_app/base.html' %}
+{% load static %}
+
+{% block title %}Senoir Manager Reports - Sky Health Check{% endblock %}
+
+{% block content %}
+<div class="report-main-content">
+    <!-- Logo and Heading Centered -->
+    <div class="company-header">
+        <img src="{% static 'voting_app/images/sky_logo.png' %}" alt="Sky Logo" class="company-logo">
+        <h1 class="company-name">Squad Health Check System</h1>
+    </div>
+
+    <h2 class="dashboard-heading">Reports & Analytics</h2>
+    <p class="dashboard-subheading">Track attendance, question responses, and team performance overview.</p>
+
+    <!-- Performance Charts -->
+    <div class="charts-section">
+        <canvas id="teamPerformanceChart"></canvas>
+        <canvas id="departmentPerformanceChart"></canvas>
+    </div>
+
+    <!-- Attendance Table -->
+    <div class="attendance-section">
+        <h3>Detailed Attendance Report</h3>
+        <table class="report-table">
+            <thead>
+                <tr>
+
+    <tr>
+        <th>Member ID</th>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Status</th>
+        <th>Team / Department</th>
+        <th>Score</th> <!-- ✅ Added -->
+    </tr>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <!-- More rows dynamically here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ✅ Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{% static 'voting_app/js/report_analysis.js' %}"></script>
+{% endblock %}
