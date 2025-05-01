@@ -1,0 +1,18 @@
+{% extends 'voting_app/base.html' %}
+{% load static %}
+
+{% block title %}Account Verification - Sky Health Check{% endblock %}
+
+{% block content %}
+<div class="verification-container">
+    <h1 class="main-title">Account Verification in Progress</h1>
+
+    <p class="verification-message">
+        Your account is under verification. We are looking forward to your patience. Once you are verified, you can log in directly.
+    </p>
+
+    <button id="login-btn" class="btn-primary-custom">Go to Login</button>
+</div>
+
+<script src="{% static 'voting_app/js/account_verification.js' %}"></script>
+{% endblock %}

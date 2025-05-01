@@ -1,0 +1,49 @@
+{% extends 'voting_app/base.html' %}
+{% load static %}
+
+{% block title %}Login - Sky Health Check{% endblock %}
+
+{% block content %}
+<div class="login-container">
+    <!-- Logo -->
+    <img src="{% static 'voting_app/images/sky_logo.png' %}" alt="Sky Logo" class="logo">
+
+    <!-- Main Title -->
+    <h1 class="main-title">Squad Health Check System</h1>
+
+    <!-- Subheading -->
+    <h2 class="subheading">Hi, Welcome!</h2>
+
+    <!-- Login Form -->
+    <form method="post" class="login-form">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+        </div>
+
+        <div class="form-options">
+            <div class="remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember me</label>
+            </div>
+            <a href="{% url 'reset_password' %}" class="forgot-password">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn-primary-custom">Log in</button>
+
+        <!-- ✅ This fixes the JS error -->
+        <div id="message" style="margin-top: 10px; color: red;"></div>
+    </form>
+
+    <p class="signup-link">Don’t have an account? <a href="{% url 'register' %}">Sign up</a></p>
+</div>
+
+<!-- Link JS -->
+<script src="{% static 'voting_app/js/login.js' %}"></script>
+{% endblock %}
