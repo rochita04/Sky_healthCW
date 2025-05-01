@@ -1,0 +1,27 @@
+{% extends 'voting_app/base.html' %}
+{% load static %}
+
+{% block title %}Welcome - Sky Health Check{% endblock %}
+
+{% block content %}
+<div class="welcome-container">
+    <!-- Logo Image -->
+    <img src="{% static 'voting_app/images/sky_logo.png' %}" alt="Sky Logo" class="logo">
+
+    <!-- Main Title -->
+    <h1 class="main-title">Squad Health Check System</h1>
+
+    <!-- Subtitle -->
+    <p class="subtitle">Track and Improve Your Engineering Team's Health Effortlessly</p>
+
+    <!-- Buttons -->
+<div class="button-group">
+    <form action="{% url 'login' %}" method="get">
+        <button type="submit" class="btn-secondary-custom">Sign In</button>
+    </form>
+    <form action="{% url 'register' %}" method="get">
+        <button type="submit" class="btn-secondary-custom">Create account</button>
+    </form>
+</div>
+</div>
+{% endblock %}
