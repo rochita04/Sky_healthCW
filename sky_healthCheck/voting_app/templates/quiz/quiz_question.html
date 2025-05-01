@@ -1,0 +1,30 @@
+{% extends 'voting_app/base.html' %}
+{% load static %}
+
+{% block title %}Quiz Questions - Sky Health Check{% endblock %}
+
+{% block content %}
+<div class="quiz-page-container">
+
+    <!-- Header Section -->
+    <div class="company-header">
+        <img src="{% static 'voting_app/images/sky_logo.png' %}" alt="Sky Logo" class="company-logo">
+        <h1 class="company-name">Squad Health Check System</h1>
+    </div>
+
+    <h2 class="quiz-heading">Take Your Squad Health Check Quiz</h2>
+    <p class="quiz-subheading">Select the appropriate traffic light status and provide feedback for each question below.</p>
+
+    <!-- Quiz content dynamically populated -->
+    <div id="quiz-content" class="quiz-content"></div>
+
+    <!-- Submit Button and Message -->
+    <div class="quiz-submit-section">
+        <button type="button" class="quiz-next-btn" disabled>Submit Quiz</button>
+        <div id="quizMessage" class="quiz-message"></div>
+    </div>
+</div>
+
+<!-- Quiz Logic -->
+<script src="{% static 'voting_app/js/quiz_question.js' %}"></script>
+{% endblock %}

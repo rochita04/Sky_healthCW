@@ -1,0 +1,43 @@
+{% extends 'voting_app/base.html' %}
+{% load static %}
+
+{% block title %}Quiz Completed - Sky Health Check{% endblock %}
+
+{% block content %}
+<div class="thank-you-container">
+    <h1>✅ Thank you for attending the Squad Health Check Quiz!</h1>
+    <p>We appreciate your participation.</p>
+
+    <button class="logout-btn" onclick="logoutUser()">Logout</button>
+</div>
+
+<style>
+.thank-you-container {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.logout-btn {
+    padding: 12px 30px;
+    background-color: #004085;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.logout-btn:hover {
+    background-color: #003060;
+}
+</style>
+
+<script>
+
+function logoutUser() {
+    localStorage.clear();
+    window.location.href = '/login/';
+}
+</script>
+{% endblock %}
