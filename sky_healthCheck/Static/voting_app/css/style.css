@@ -1,0 +1,558 @@
+/* ==========================================
+   Global Sticky Footer Fix (Works for All Pages)
+========================================== */
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ✅ Full viewport height */
+}
+
+.content {
+    flex: 1;
+    display: flex;                      /* ✅ Flexbox centering */
+    justify-content: center;            /* ✅ Horizontal centering */
+    align-items: center;                /* ✅ Vertical centering */
+    flex-direction: column;             /* ✅ Stack vertically */
+    padding: 20px;                      /* ✅ Safe padding */
+    box-sizing: border-box;             /* ✅ Prevent overflow issues */
+}
+
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    flex-shrink: 0;
+}
+
+/* ==========================================
+   Welcome Page Styles (welcome.html)
+========================================== */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    margin-bottom: 60px;
+    bottom: 60px;
+
+}
+
+/* Titles and Buttons */
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555555;
+    margin-bottom: 50px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn-primary-custom {
+    background-color: #000000;
+    color: #ffffff;
+    width: 230px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: #333333;
+}
+
+.btn-secondary-custom {
+    background-color: transparent;
+    border: 2px solid #000000;
+    color: #000000;
+    width: 230px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary-custom:hover {
+    background-color: #f5f5f5;
+}
+
+/* ==========================================
+   Responsive Design for Welcome Page (Media Queries)
+========================================== */
+@media (max-width: 768px) {
+    .logo {
+        width: 120px;
+        margin-bottom: 40px;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .btn-primary-custom, .btn-secondary-custom {
+        width: 200px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+        margin-bottom: 30px;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .btn-primary-custom, .btn-secondary-custom {
+        width: 180px;
+        font-size: 0.95rem;
+    }
+}
+
+/* ==========================================
+   Login Page Styles (login.html)
+========================================== */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.subheading {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+/* Checkbox and Forgot Password */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me label {
+    font-size: 0.95rem;
+}
+
+.forgot-password {
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: #000000;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Login Button (Reuses Primary Button) */
+.btn-primary-custom {
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: #333333;
+}
+
+/* Signup Link */
+.signup-link {
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.signup-link a {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   Responsive Design for Login Page
+========================================== */
+@media (max-width: 480px) {
+    .login-form {
+        max-width: 300px;
+    }
+}
+
+/* ==========================================
+   Register Page Styles (register.html)
+   Centered Layout Without Scroll
+========================================== */
+.register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Ensuring Footer Doesn't Overlap */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    margin-bottom: 40px;
+}
+
+/* Titles */
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+.register-form {
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+/* Checkbox */
+.form-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-options label {
+    font-size: 0.95rem;
+}
+
+/* Buttons */
+.btn-primary-custom {
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: #333333;
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.login-link a {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   Responsive Design for Register Page
+========================================== */
+@media (max-width: 480px) {
+    .register-form {
+        max-width: 300px;
+    }
+}
+
+/* ==========================================
+   Reset Password Page Styles (reset_password.html)
+========================================== */
+.reset-password-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.description-text {
+    font-size: 0.95rem;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+.reset-password-form {
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+/* Reuses Primary Button Styling */
+.btn-primary-custom {
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: #333333;
+}
+
+/* ==========================================
+   Responsive Design for Reset Password Page
+========================================== */
+@media (max-width: 480px) {
+    .reset-password-form {
+        max-width: 300px;
+    }
+}
+
+/* ==========================================
+   Role Selection Page Styles (role_selection.html)
+   Custom Button: .role-btn (Safe from other pages)
+========================================== */
+
+/* ================================
+   Role Selection Page Styling
+   ================================ */
+.role-selection-container {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.role-selection-container .logo {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-size: 28px;
+    color: #00d1b2;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.role-select-section {
+    margin-bottom: 20px;
+}
+
+.role-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.role-dropdown {
+    padding: 10px;
+    width: 70%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.role-dropdown:focus {
+    border-color: #00d1b2;
+    outline: none;
+}
+
+
+
+.btn-primary-custom:disabled {
+    background-color: #b2dfdb;
+    cursor: not-allowed;
+}
+
+.btn-primary-custom:hover:not(:disabled) {
+    background-color: #009688;
+}
+
+.message-area {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Optional Responsive Design */
+@media (max-width: 600px) {
+    .role-selection-container {
+        padding: 30px 15px;
+    }
+
+    .role-dropdown {
+        width: 90%;
+    }
+}
