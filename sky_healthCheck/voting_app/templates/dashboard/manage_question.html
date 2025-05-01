@@ -1,0 +1,34 @@
+{% extends 'voting_app/base.html' %}
+{% load static %}
+
+{% block title %}Manage Questions - Sky Health Check{% endblock %}
+
+{% block content %}
+<div class="question-management-container">
+    <!-- Left Section: Add Questions -->
+    <div class="left-section">
+        <img src="{% static 'voting_app/images/sky_logo.png' %}" alt="Sky Logo" class="logo">
+        <h1 class="main-title">Squad Health Check System</h1>
+        <h2 class="subheading">Quiz Portal</h2>
+
+        <input type="text" id="new-question-text" placeholder="Enter question here" required class="question-input">
+        <button id="add-question-btn" class="btn-primary-custom">CREATE</button>
+    </div>
+
+    <!-- Right Section: View / Delete Questions -->
+    <div class="right-section">
+        <div class="questions-grid" id="questions-list">
+            <!-- Questions will be dynamically inserted here -->
+        </div>
+        <div class="question-actions">
+            <button id="view-question-btn" class="btn-greencustom" disabled>View Question</button>
+            <button id="delete-question-btn" class="btn-danger-custom" disabled>Delete Question</button>
+        </div>
+    </div>
+</div>
+
+<div id="message" class="message-area"></div>
+
+<!-- Link JS -->
+<script src="{% static 'voting_app/js/manage_question.js' %}"></script>
+{% endblock %}
