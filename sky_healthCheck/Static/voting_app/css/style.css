@@ -2215,3 +2215,286 @@ footer {
     max-width: 600px;
     width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.top-navbar {
+    background-color: black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.top-navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Update Form */
+.update-user-form {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.update-user-form h3 {
+    margin-bottom: 15px;
+}
+
+.update-user-form .form-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.update-user-form input,
+.update-user-form select {
+    flex: 1 1 30%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.update-btn {
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.update-btn:hover {
+    background-color: #333;
+}
+
+.update-message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Table */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.admin-table th, .admin-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.admin-table th {
+    background-color: black;
+    color: white;
+}
+
+.admin-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+.traffic-light-icon {
+    width: 150px;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.team-summary-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.team-summary-logo {
+    height: 60px;
+}
+
+.company-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #111;
+    margin: 0;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.report-table th,
+.report-table td {
+    border: 1px solid #ddd;
+    padding: 12px 14px;
+    text-align: center;
+}
+
+.report-table th {
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+.report-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.report-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.chart-container {
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.chart-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.team-summary-container {
+    padding: 2rem;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.report-table th, .report-table td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.report-table th {
+    background-color: #000;
+    color: #fff;
+}
+
+.header .company-logo {
+    height: 60px;
+}
+
+.main-title, .charts-section h3 {
+    margin-top: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+
+.chart-container {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.report-table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+
+.report-table th,
+.report-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.team-summary-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
