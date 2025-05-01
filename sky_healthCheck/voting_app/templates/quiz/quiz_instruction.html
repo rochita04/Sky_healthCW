@@ -1,0 +1,52 @@
+{% extends 'voting_app/base.html' %}
+{% load static %}
+
+{% block title %}Quiz Instructions - Sky Health Check{% endblock %}
+
+{% block content %}
+<div class="quiz-instruction-container">
+    <!-- Header Row: Logo Left, Title Center -->
+    <div class="instruction-header-row">
+        <div class="logo-left">
+            <img src="{% static 'voting_app/images/sky_logo.png' %}" alt="Sky Logo" class="logo-small">
+        </div>
+        <div class="page-title-center">
+            <h1 class="welcome-title">Welcome to Squad Health Check System</h1>
+        </div>
+    </div>
+
+    <!-- Instruction Box -->
+    <div class="instruction-box">
+        <h2 class="instruction-title">Completing Health Check</h2>
+        <div class="instruction-content">
+            <p>1. Each question will have a topic name at the top.</p>
+            <p>2. Use the buttons to select a state for each aspect:</p>
+            <ul>
+                <li>Click on the <b>"Green"</b> button if the aspect is healthy.</li>
+                <li>Click on the <b>"Yellow"</b> button if there are some concerns.</li>
+                <li>Click on the <b>"Red"</b> button if the aspect needs urgent attention.</li>
+            </ul>
+            <p>3. You can add comments to any of the 3 comment boxes provided.</p>
+            <p>4. Once you have made your selections, click next to continue to the next question.</p>
+        </div>
+    </div>
+
+    <!-- Traffic Light Section -->
+    <div class="traffic-light-section">
+        <h3 class="state-heading">Select State</h3>
+        <div class="traffic-light">
+            <img src="{% static 'voting_app/images/traffic_light.png' %}" alt="Traffic Light" class="traffic-light-img">
+            <div class="state-labels">
+                <p><span class="red-dot"></span> getting worse</p>
+                <p><span class="yellow-dot"></span> stable</p>
+                <p><span class="green-dot"></span> improving</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Get Started Button -->
+    <form method="get" action="{% url 'quiz_question' %}">
+        <button type="submit" class="quiz-start-btn">Get Started</button>
+    </form>
+</div>
+{% endblock %}

@@ -556,3 +556,376 @@ html, body {
         width: 90%;
     }
 }
+
+
+/* ==========================================
+   Quiz Instruction Page Improved Layout
+========================================== */
+
+/* Header Alignment: Logo Left, Title Center */
+.instruction-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo-left .logo-small {
+    width: 100px;
+}
+
+.page-title-center {
+    flex: 1;
+    text-align: center;
+}
+
+.welcome-title {
+    font-size: 3rem;
+    font-weight: bold;
+    padding-left: 40px;
+
+}
+
+/* Instruction Box Styling */
+.instruction-box {
+    border: 2px solid #000000;
+    border-radius: 12px;
+    padding: 30px 40px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto 40px auto;
+    max-width: 700px;
+    text-align: left;
+}
+
+.instruction-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.instruction-content p,
+.instruction-content ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.instruction-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Centering the Traffic Light Section */
+.traffic-light-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.state-heading {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.traffic-light {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.traffic-light-img {
+    width: 150px;
+}
+
+.state-labels {
+    text-align: left;
+}
+
+.state-labels p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.red-dot, .yellow-dot, .green-dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.red-dot { background-color: red; }
+.yellow-dot { background-color: yellow; }
+.green-dot { background-color: green; }
+
+/* Centered Get Started Button */
+.quiz-start-btn {
+    background-color: #000000;
+    color: #ffffff;
+    width: 200px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto; /* ✅ Center the button */
+}
+
+.quiz-start-btn:hover {
+    background-color: #333333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .instruction-header-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .traffic-light {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .instruction-box {
+        padding: 20px;
+    }
+}
+
+/* ==========================================
+   Quiz Question Page (Traffic Light with Radio Options)
+========================================== */
+
+/* ----- Quiz Container ----- */
+.quiz-question-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* ----- Question Box Styling ----- */
+.question-box {
+    border: 2px solid #000000;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.question-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* ----- Vote Section (Image + Radio Buttons Side by Side) ----- */
+.vote-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+/* Traffic Light Image Styling */
+.traffic-light-question .traffic-light-img {
+    width: 140px;
+}
+
+/* Radio Buttons Styling */
+.vote-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.radio-label {
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.radio-label input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* ----- Comment Boxes Styling ----- */
+.comment-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comment-box {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+/* ----- Navigation Button ----- */
+.quiz-next-btn {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 12px 40px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.quiz-next-btn:hover {
+    background-color: #333333;
+}
+
+/* ----- Responsive Adjustments ----- */
+@media (max-width: 600px) {
+    .vote-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .quiz-next-btn {
+        width: 80%;
+    }
+}
+
+/* Dashboard Navbar Styling */
+.navbar {
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-small {
+    width: 40px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.navbar-title {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.navbar-right a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-right a:hover {
+    background-color: #444444;
+}
+
+.navbar-right a.active {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* Main Content Styling */
+.main-content {
+    padding: 50px 30px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Overview Cards (for Dashboard Metrics) */
+.overview-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    flex: 1 1 200px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333333;
+}
+
+.card p {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #000000;
+}
+
+.quiz-submit-section {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 120px; /* Enough space to stay above footer */
+}
+
+.quiz-next-btn {
+    padding: 12px 40px;
+    font-size: 16px;
+    background-color: #004085;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quiz-next-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#quizMessage {
+    margin-top: 15px;
+    color: red;
+    font-weight: 500;
+}
+
