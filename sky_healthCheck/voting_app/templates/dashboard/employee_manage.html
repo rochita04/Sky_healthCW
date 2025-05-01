@@ -1,0 +1,44 @@
+{% extends 'voting_app/base.html' %}
+{% load static %}
+
+{% block title %}Manage Employees - Sky Health Check{% endblock %}
+
+{% block content %}
+<div class="employee-management-container">
+    <h1 class="main-title">Employee Management Portal</h1>
+
+    <!-- ✅ Create New Role Section -->
+    <div class="create-role-section">
+        <h2>Add New Role</h2>
+        <input type="text" id="new-role-name" class="input-box" placeholder="Enter New Role Name">
+        <button id="add-role-btn" class="btn-primary-custom">Add Role</button>
+    </div>
+
+    <!-- ✅ Role Selection -->
+    <div class="form-group">
+        <label for="role-type">Select Role Type:</label>
+        <select id="role-type" class="input-box">
+            <option value="">-- Choose Role --</option>
+            <!-- Roles will be dynamically inserted here -->
+        </select>
+    </div>
+
+    <!-- ✅ Stable Dynamic Fields Section -->
+    <div id="dynamic-fields" class="form-section show">
+        <!-- Fields will appear here -->
+    </div>
+
+    <!-- ✅ Action Buttons -->
+    <div class="action-buttons">
+        <button id="update-btn" class="btn-primary-custom">Update</button>
+        <button id="add-btn" class="btn-primary-custom">Add</button>
+        <button id="view-btn" class="btn-primary-custom">View</button>
+        <button id="delete-btn" class="btn-danger-custom">Delete</button>
+    </div>
+
+    <div id="message" class="message-area"></div>
+</div>
+
+
+<script src="{% static 'voting_app/js/manage_employee.js' %}"></script>
+{% endblock %}
