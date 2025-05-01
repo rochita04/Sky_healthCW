@@ -1,0 +1,36 @@
+{% extends 'voting_app/base.html' %}
+{% load static %}
+
+{% block title %}Department Leader Home - Sky Health Check{% endblock %}
+
+{% block content %}
+<!-- Header Section -->
+<div class="instruction-header-row">
+    <div class="logo-left">
+        <img src="{% static 'voting_app/images/sky_logo.png' %}" alt="Sky Logo" class="logo-small">
+    </div>
+    <div class="page-title-center">
+        <h1 class="welcome-title">Welcome to Squad Health Check System</h1>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="department-leader-container">
+    <h2 class="instruction-title">
+        🏢 <strong>Department Leader</strong>
+    </h2>
+    <h3>Department</h3>
+
+    <div class="options-grid">
+        <button class="option-btn" onclick="window.location.href='/department_summary/'">
+            VIEW SUMMARY OF DEPARTMENTS
+        </button>
+<!--        <button class="option-btn" onclick="window.location.href='/department_summary/'">-->
+<!--            VIEW SUMMARY OF TEAMS IN MY DEPARTMENT-->
+<!--        </button>-->
+    </div>
+</div>
+
+<!-- Link to your existing CSS -->
+<link rel="stylesheet" href="{% static 'voting_app/css/style.css' %}">
+{% endblock %}
