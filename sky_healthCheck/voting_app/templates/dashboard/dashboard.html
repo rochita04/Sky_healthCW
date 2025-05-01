@@ -1,0 +1,79 @@
+{% extends 'voting_app/base.html' %}
+{% load static %}
+
+{% block title %}Admin Dashboard - Sky Health Check{% endblock %}
+
+{% block content %}
+<div class="report-main-content">
+
+    <!-- Top Navbar Links -->
+    <nav class="top-navbar">
+        <a href="{% url 'employee_manage' %}">Manage Employees</a>
+        <a href="{% url 'manage_questions' %}">Manage Questions</a>
+<!--        <a href="{% url 'report_analysis' %}">Reports / Analytics</a>-->
+        <a href="{% url 'login' %}">Logout</a>
+    </nav>
+    <div >
+
+    </div>
+    <h2 class="main-title">Admin Dashboard</h2>
+
+
+    <p class="dashboard-subheading">Manage users, approvals, quiz status, and activity below:</p>
+
+    <!-- 🔄 Update User Section -->
+    <div class="update-user-form">
+        <center> <h3> Update User Details</h3> </center>
+        <div class="form-row">
+            <input type="text" id="update-user-id" placeholder="User ID">
+            <input type="text" id="update-member-id" placeholder="Member ID">
+
+            <div class="toggle-group">
+                <label>Role Approval:</label>
+                <button type="button" id="role-approve-yes" class="toggle-btn">✅ Yes</button>
+                <button type="button" id="role-approve-no" class="toggle-btn">❌ No</button>
+            </div>
+
+            <div class="toggle-group">
+                <label>Quiz Status:</label>
+                <button type="button" id="quiz-status-yes" class="toggle-btn">✅ Completed</button>
+                <button type="button" id="quiz-status-no" class="toggle-btn">❌ Not Completed</button>
+            </div>
+
+            <input type="text" id="update-team-id" placeholder="Team ID (optional)">
+
+            <div class="toggle-group">
+                <label>Active Status:</label>
+                <button type="button" id="active-yes" class="toggle-btn">✅ Active</button>
+                <button type="button" id="active-no" class="toggle-btn">❌ Inactive</button>
+            </div>
+
+            <button id="submit-update" class="update-btn">Update User</button>
+        </div>
+        <p id="update-message" class="update-message"></p>
+    </div>
+
+    <!-- 👥 Live User Report Table -->
+    <div class="table-container">
+        <table id="users-table" class="report-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>Member ID</th>
+                    <th>Quiz Status</th>
+                    <th>Role Approval</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data filled by JS -->
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="{% static 'voting_app/js/dashboard.js' %}"></script>
+{% endblock %}
